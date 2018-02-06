@@ -1,5 +1,21 @@
 .board {
-  background-color: green;
-  width: 760px;
-  height: 760px;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.board-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.board-inner {
+    box-shadow: 0 0 0.8em;
+    border-radius: 2em;
+    margin-left: auto;
+    margin-right: auto; 
+    background-image: url(./board.png);
+    width: 760px;
+    height: 760px;
 }
