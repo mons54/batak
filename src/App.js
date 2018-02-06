@@ -10,9 +10,19 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div class="board">
+          <div class="card card--heart card--10">
+            <div class="card-before"></div>
+            <div class="card-symbol"></div>
+            <div class="card-after"></div>
+          </div>
+          <div class="card card--diamond card--13">
+            <div class="card-before"></div>
+            <div class="card-symbol"></div>
+            <div class="card-after"></div>
+          </div>
+        </div>
       </div>
     );
   }
