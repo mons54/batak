@@ -1,0 +1,176 @@
+.card {
+  display: inline-block;
+  border-radius: 2%;
+  box-shadow: 0 0 0.4em #000;
+  position: relative;
+  font-family: fantasy;
+  width: 18%;
+  height: 24%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.card-before,
+.card-after {
+  position: absolute;
+}
+
+.card-before {
+  top: 0;
+  left: 0;
+  padding: 4% 0 0 4%;
+}
+
+.card-after {
+  bottom: 0;
+  right: 0;
+  padding: 0 4% 4% 0;
+}
+
+.card-before::before,
+.card-before::after,
+.card-after::before,
+.card-after::after {
+  position: relative;
+  display: block;
+}
+
+.card-before::before,
+.card-after::after {
+  font-size: 2em;
+}
+
+.card-before::after,
+.card-after::before {
+  font-size: 1.6em;
+}
+
+.card-before::before {
+  margin-top: -24%;
+}
+
+.card-before::after {
+  margin-top: -60%;
+}
+
+.card-after::before {
+  margin-bottom: -60%;
+  transform: rotate(180deg);
+}
+
+.card-after::after {
+  margin-bottom: -24%;
+  transform: rotate(180deg);
+}
+
+.card--heart,
+.card--diamond {
+  color: #FF5722;
+}
+
+.card--clover,
+.card--spade {
+  color: #212121;
+}
+
+.card--heart > .card-before::after,
+.card--heart > .card-after::before,
+.card--heart > .card-symbol::before {
+  content: "♥";
+}
+
+.card--diamond > .card-before::after,
+.card--diamond > .card-after::before,
+.card--diamond > .card-symbol::before {
+  content: "♦";
+}
+
+.card--clover > .card-before::after,
+.card--clover > .card-after::before,
+.card--clover > .card-symbol::before {
+  content: "♣";
+}
+
+.card--spade > .card-before::after,
+.card--spade > .card-after::before,
+.card--spade > .card-symbol::before {
+  content: "♠";
+}
+
+.card-symbol {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+}
+
+.card-symbol::before {
+  display: block;
+  margin-top: 36%;
+}
+
+.card--1 > .card-before::before,
+.card--1 > .card-after::after {
+  content: "A"
+}
+
+.card--2 > .card-before::before,
+.card--2 > .card-after::after {
+  content: "2"
+}
+
+.card--3 > .card-before::before,
+.card--3 > .card-after::after {
+  content: "3"
+}
+
+.card--4 > .card-before::before,
+.card--4 > .card-after::after {
+  content: "4"
+}
+
+.card--5 > .card-before::before,
+.card--5 > .card-after::after {
+  content: "5"
+}
+
+.card--6 > .card-before::before,
+.card--6 > .card-after::after {
+  content: "6"
+}
+
+.card--7 > .card-before::before,
+.card--7 > .card-after::after {
+  content: "7"
+}
+
+.card--8 > .card-before::before,
+.card--8 > .card-after::after {
+  content: "8"
+}
+
+.card--9 > .card-before::before,
+.card--9 > .card-after::after {
+  content: "9"
+}
+
+.card--10 > .card-before::before,
+.card--10 > .card-after::after {
+  content: "10"
+}
+
+.card--11 > .card-before::before,
+.card--11 > .card-after::after {
+  content: "J"
+}
+
+.card--12 > .card-before::before,
+.card--12 > .card-after::after {
+  content: "Q"
+}
+
+.card--13 > .card-before::before,
+.card--13 > .card-after::after {
+  content: "K"
+}
