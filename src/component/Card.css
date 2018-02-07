@@ -1,13 +1,55 @@
 .card {
-  display: inline-block;
-  border-radius: 2%;
-  box-shadow: 0 0 0.4em #000;
   position: relative;
+  display: inline-block;
   font-family: fantasy;
   width: 18%;
   height: 24%;
-  background-color: #fff;
   text-align: center;
+  perspective: 1000px;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+.card-content:hover {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 4%;
+  box-shadow: 0 0 0.8em #000;
+}
+
+.card-face--front {
+  transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.card-face--back {
+  color: #fff;
+  background-image: url(./../image/pattern/carbon-fibre.png);
+  background-color: #291900;
+}
+
+.card-face--back::before {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: cursive;
+  content: "cardgamesapp.com";
+  backface-visibility: hidden;
+  color: #795548;
 }
 
 .card-before,
@@ -73,27 +115,27 @@
   color: #212121;
 }
 
-.card--heart > .card-before::after,
-.card--heart > .card-after::before,
-.card--heart > .card-symbol::before {
+.card--heart .card-before::after,
+.card--heart .card-after::before,
+.card--heart .card-symbol::before {
   content: "♥";
 }
 
-.card--diamond > .card-before::after,
-.card--diamond > .card-after::before,
-.card--diamond > .card-symbol::before {
+.card--diamond .card-before::after,
+.card--diamond .card-after::before,
+.card--diamond .card-symbol::before {
   content: "♦";
 }
 
-.card--clover > .card-before::after,
-.card--clover > .card-after::before,
-.card--clover > .card-symbol::before {
+.card--clover .card-before::after,
+.card--clover .card-after::before,
+.card--clover .card-symbol::before {
   content: "♣";
 }
 
-.card--spade > .card-before::after,
-.card--spade > .card-after::before,
-.card--spade > .card-symbol::before {
+.card--spade .card-before::after,
+.card--spade .card-after::before,
+.card--spade .card-symbol::before {
   content: "♠";
 }
 
@@ -110,67 +152,67 @@
   margin-top: 36%;
 }
 
-.card--1 > .card-before::before,
-.card--1 > .card-after::after {
+.card--1 .card-before::before,
+.card--1 .card-after::after {
   content: "A"
 }
 
-.card--2 > .card-before::before,
-.card--2 > .card-after::after {
+.card--2 .card-before::before,
+.card--2 .card-after::after {
   content: "2"
 }
 
-.card--3 > .card-before::before,
-.card--3 > .card-after::after {
+.card--3 .card-before::before,
+.card--3 .card-after::after {
   content: "3"
 }
 
-.card--4 > .card-before::before,
-.card--4 > .card-after::after {
+.card--4 .card-before::before,
+.card--4 .card-after::after {
   content: "4"
 }
 
-.card--5 > .card-before::before,
-.card--5 > .card-after::after {
+.card--5 .card-before::before,
+.card--5 .card-after::after {
   content: "5"
 }
 
-.card--6 > .card-before::before,
-.card--6 > .card-after::after {
+.card--6 .card-before::before,
+.card--6 .card-after::after {
   content: "6"
 }
 
-.card--7 > .card-before::before,
-.card--7 > .card-after::after {
+.card--7 .card-before::before,
+.card--7 .card-after::after {
   content: "7"
 }
 
-.card--8 > .card-before::before,
-.card--8 > .card-after::after {
+.card--8 .card-before::before,
+.card--8 .card-after::after {
   content: "8"
 }
 
-.card--9 > .card-before::before,
-.card--9 > .card-after::after {
+.card--9 .card-before::before,
+.card--9 .card-after::after {
   content: "9"
 }
 
-.card--10 > .card-before::before,
-.card--10 > .card-after::after {
+.card--10 .card-before::before,
+.card--10 .card-after::after {
   content: "10"
 }
 
-.card--11 > .card-before::before,
-.card--11 > .card-after::after {
+.card--11 .card-before::before,
+.card--11 .card-after::after {
   content: "J"
 }
 
-.card--12 > .card-before::before,
-.card--12 > .card-after::after {
+.card--12 .card-before::before,
+.card--12 .card-after::after {
   content: "Q"
 }
 
-.card--13 > .card-before::before,
-.card--13 > .card-after::after {
+.card--13 .card-before::before,
+.card--13 .card-after::after {
   content: "K"
 }
